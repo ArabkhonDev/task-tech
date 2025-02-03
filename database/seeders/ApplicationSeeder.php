@@ -16,7 +16,7 @@ class ApplicationSeeder extends Seeder
     {
         for($i=1; $i<=50; $i++){
             Application::create([
-                'user_id'=>random_int(2, 10),
+                'user_id'=>2,
                 'subject'=> 'Laravel has wonderful',
                 'message'=> 'Laravel has wonderful documentation covering every documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.',
                 'file_url'=>null,
