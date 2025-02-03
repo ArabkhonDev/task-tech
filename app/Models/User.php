@@ -18,11 +18,6 @@ class User extends Authenticatable
         'password',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
@@ -36,7 +31,7 @@ class User extends Authenticatable
         ];
     }
 
-    public function role(){
-        return $this->belongsTo(Role::class);
-    }
+    public function role(){return $this->belongsTo(Role::class);}
+
+    public function applications(){return $this->hasMany(Application::class);}
 }
